@@ -1,0 +1,447 @@
+/* --- 1. GENERAL STYLES & FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffe4ec 50%, #ffd6e8 100%);
+    color: #333;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- FLOATING HEARTS BACKGROUND --- */
+.heart-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    bottom: -10%;
+    font-size: 1.5rem;
+    opacity: 0.3;
+    animation: floatUp 15s linear infinite;
+}
+
+/* Individual Heart Variety */
+.heart:nth-child(1) { left: 10%; animation-duration: 12s; font-size: 1.2rem; }
+.heart:nth-child(2) { left: 25%; animation-delay: 2s; animation-duration: 18s; }
+.heart:nth-child(3) { left: 40%; animation-delay: 5s; animation-duration: 14s; }
+.heart:nth-child(4) { left: 55%; animation-delay: 8s; animation-duration: 20s; }
+.heart:nth-child(5) { left: 70%; animation-delay: 3s; animation-duration: 16s; }
+.heart:nth-child(6) { left: 85%; animation-delay: 10s; animation-duration: 15s; }
+.heart:nth-child(7) { left: 95%; animation-delay: 1s; animation-duration: 22s; }
+.heart:nth-child(8) { left: 5%; animation-delay: 12s; animation-duration: 19s; }
+
+/* --- 2. PHASE 1: HERO SECTION --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(180deg, #fff0f5 0%, #ffeaf2 100%);
+    padding: 20px;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20210324/pngtree-happy-valentine-s-day-pink-lily-background-image_602331.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.hero * {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid white;
+    box-shadow: 0 10px 25px rgba(255, 105, 135, 0.3);
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #e63973;
+    margin-bottom: 20px;
+}
+
+.timer-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #ff4d6d;
+    margin-bottom: 15px;
+}
+
+.fade-in {
+    animation: fadeIn 3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- 3. PHASE 2: TIMELINE --- */
+.timeline-container {
+    width: 100%;
+}
+
+.timeline-slide {
+    min-height: 100vh; 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px;
+    background: linear-gradient(180deg, #fffafa 0%, #ffeef2 100%);
+    border-bottom: 1px solid #ffdde5;
+}
+
+.content-box {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.timeline-img {
+    width: 90%;
+    max-width: 550px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(230, 57, 115, 0.2);
+    margin: 30px 0;
+}
+
+.year-badge {
+    background: #ff4d6d;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.caption {
+    font-family: 'Georgia', serif;
+    font-style: italic;
+    color: #444;
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* --- 4. PHASE 3: COMPLIMENT GALLERY --- */
+.compliment-gallery {
+    padding: 100px 5%;
+    background: linear-gradient(135deg, #ffe4ec 0%, #fffafa 100%);
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: #ff4d6d;
+    margin-bottom: 60px;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(255, 77, 109, 0.12);
+    transition: transform 0.3s ease-in-out;
+    border: 1px solid #f3dce1;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(255, 77, 109, 0.25);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 380px; 
+    overflow: hidden;
+}
+
+.card-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-content h3 {
+    color: #e63973;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- 5. PHASE 3.5: LOVE CHART SECTION --- */
+.love-chart-section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff0f5 0%, #fde2e4 100%);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+#reveal-btn {
+    background-color: #ff8fab; 
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 143, 171, 0.4);
+}
+
+#reveal-btn:hover {
+    background-color: #ff6495;
+    transform: scale(1.05);
+}
+
+.pie-chart {
+    width: 320px;
+    height: 320px;
+    margin: 40px auto;
+    border-radius: 50%;
+    background: conic-gradient(
+        #ffb3c1 0% 80%, 
+        #c8b6ff 80% 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 8px solid white;
+    box-shadow: 0 10px 30px rgba(255, 179, 193, 0.3);
+    animation: floating 3s ease-in-out infinite;
+}
+
+.chart-label {
+    color: white;
+    font-weight: 600;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+    padding: 0 20px;
+    line-height: 1.4;
+}
+
+.label-pink {
+    font-size: 1.2rem;
+    margin-bottom: 40px; 
+}
+
+.label-purple {
+    font-size: 0.85rem; 
+    margin-top: 10px;
+}
+
+.chart-caption {
+    font-size: 1.6rem;
+    color: #e63973;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    margin-top: 20px;
+}
+
+/* --- 6. PHASE 4: THE FINAL ASK --- */
+.final-ask {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #fff0f5 0%, #ffd6e8 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+.ask-card {
+    background: white;
+    padding: 60px 40px;
+    border-radius: 40px;
+    box-shadow: 0 20px 50px rgba(255, 77, 109, 0.18);
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+}
+
+.ask-card h1 {
+    font-family: 'Playfair Display', serif;
+    color: #e63973;
+    font-size: 2.3rem;
+    margin-bottom: 30px;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    height: 120px; 
+}
+
+#yes-btn {
+    background-color: #ff4d6d;
+    color: white;
+    padding: 15px 45px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    animation: heartbeat 1.5s infinite;
+    transition: 0.2s;
+    z-index: 10;
+}
+
+#yes-btn:hover {
+    background-color: #ff1a45;
+    transform: scale(1.1);
+}
+
+#no-btn {
+    background-color: #adb5bd;
+    color: white;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.1s;
+    z-index: 5;
+}
+
+/* --- SPECIAL GIFT MESSAGE STYLING --- */
+#special-msg {
+    margin-top: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    border: 2px dashed #ff8fab;
+    animation: popIn 0.5s ease-out;
+}
+
+.gamer-compliment {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem !important;
+    color: #2196F3 !important; 
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.heartfelt-msg {
+    font-size: 1.2rem !important;
+    color: #e63973 !important;
+    font-style: italic;
+}
+
+#win-message p {
+    font-size: 2rem;
+    color: #ff4d6d;
+    font-weight: 600;
+}
+
+.surprise-btn {
+    margin-top: 25px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+/* --- 7. UTILITIES & ANIMATIONS --- */
+.hidden {
+    display: none !important;
+}
+
+#love-chart-wrapper {
+    animation: popIn 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.4; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(-110vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes popIn {
+    0% { opacity: 0; transform: scale(0.5) rotate(-10deg); }
+    100% { opacity: 1; transform: scale(1) rotate(0deg); }
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}

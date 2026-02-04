@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Mon ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="heart-bg">
+        <div class="heart">❤️</div>
+        <div class="heart">💖</div>
+        <div class="heart">❤️</div>
+        <div class="heart">💕</div>
+        <div class="heart">❤️</div>
+        <div class="heart">💗</div>
+        <div class="heart">❤️</div>
+        <div class="heart">🌸</div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="images/anniversary.jpeg" alt="Us" class="hero-img">
+            <h1 class="fade-in">Hi Mon, I made something for you...</h1>
+            <div id="timer" class="timer-grid"></div>
+            <p class="fade-in">It’s been exactly this long since Sept 1, 2022...</p>
+        </div>
+    </section>
+
+    <div class="timeline-container">
+        <section class="timeline-slide">
+            <div class="content-box">
+                <span class="year-badge">2022</span>
+                <img src="images/coaching.jpeg" alt="Coaching" class="timeline-img">
+                <p class="caption">"Where it all began. The best thing I ever learned in coaching was how much I liked you."</p>
+            </div>
+        </section>
+
+        <section class="timeline-slide">
+            <div class="content-box">
+                <span class="year-badge">The First Date</span>
+                <img src="images/bbq-nation.jpeg" alt="Barbeque Nation" class="timeline-img">
+                <p class="caption">"Our first date at Barbeque Nation. My stomach was full of food, but my heart was even fuller."</p>
+            </div>
+        </section>
+
+        <section class="timeline-slide">
+            <div class="content-box">
+                <span class="year-badge">2023 - LDR</span>
+                <img src="images/ldr-screenshot.jpeg" alt="LDR" class="timeline-img">
+                <p class="caption">"The toughest year. 365 days of missing you, but it only made us stronger."</p>
+            </div>
+        </section>
+
+        <section class="timeline-slide">
+            <div class="content-box">
+                <span class="year-badge">2024 - College</span>
+                <img src="images/college.jpeg" alt="College" class="timeline-img">
+                <p class="caption">"Back together. No more long distance, just us against the world."</p>
+            </div>
+        </section>
+    </div>
+
+    <section class="compliment-gallery">
+        <h2 class="section-title">A Few Reasons Why I Love You...</h2>
+        <div class="card-grid">
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/laughing.jpeg" alt="Laughing">
+                </div>
+                <div class="card-content">
+                    <h3>My Best Friend</h3>
+                    <p>The bravest soul I know and the person who understands me best.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/dressed-up.jpeg" alt="Gorgeous">
+                </div>
+                <div class="card-content">
+                    <h3>Most Gorgeous</h3>
+                    <p>You take my breath away every single day, no matter what you're wearing.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/sweet.jpeg" alt="Sweet">
+                </div>
+                <div class="card-content">
+                    <h3>The Most Caring</h3>
+                    <p>The way you look after me and everyone around you is truly special.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-image-container">
+                    <img src="images/silly.jpeg" alt="Silly">
+                </div>
+                <div class="card-content">
+                    <h3>My Favorite Weirdo</h3>
+                    <p>There's no one else in the world I'd rather be completely silly with.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="love-chart-section">
+        <div class="chart-container">
+            <h2 class="section-title">A Technical Analysis of My Feelings</h2>
+            
+            <button id="reveal-btn" onclick="revealChart()">Analyze My Feelings 📊</button>
+
+            <div id="love-chart-wrapper" class="hidden">
+                <div class="pie-chart">
+                    <div class="chart-label label-pink">80% - I love you</div>
+                    <div class="chart-label label-purple">20% - I still love you, just in a different colour</div>
+                </div>
+                <p class="chart-caption">Mon, My heart is 100% yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-ask">
+        <div class="ask-card">
+            <h1 id="main-question">Will you be my Valentine?</h1>
+            <div class="button-container">
+                <button id="yes-btn">YES! ❤️</button>
+                <button id="no-btn">No</button>
+            </div>
+            
+            <div id="win-message" class="hidden">
+                <p>I KNEW YOU'D SAY YES! 🥰</p>
+                
+                <button id="gift-btn" class="surprise-btn">Click for your surprise gift 🎁</button>
+                
+                <div id="special-msg" class="hidden">
+                    <p class="gamer-compliment">Honestly? You’re way more beautiful than a Max Level M416 Glacier. ❄️🔥</p>
+                    <p class="heartfelt-msg">I’m so lucky to have you as my teammate for life. I love you more than words can say, Mon. ❤️</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
